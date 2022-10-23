@@ -35,15 +35,31 @@ Example:
 
 `Report: 1 3 N`
 
-## API endpoint
+## API documentation
+Url: `https://go-robot-api.up.railway.app`
 
-`/game?width=5&deep=5&orientation=N&x=1&y=2&command=RFRFFRFRFRR`
+
+### GET request
+
+Endpoint: `/game`
 
  Example Request:
 
 
 ```bash
- curl --location --request POST 'http://localhost:8080/game' \
+ curl --location --request GET 'https://go-robot-api.up.railway.app/game?width=5&deep=5&orientation=N&x=1&y=2&command=RFRFFRFRF'
+ 
+```
+
+### POST request
+
+Endpoint: `/game`
+
+ Example Request:
+
+
+```bash
+ curl --location --request POST 'https://go-robot-api.up.railway.app/game' \
 --data-raw '{
         "width": "5",
         "deep": "5",
@@ -54,6 +70,8 @@ Example:
     }'
 ```
 
-To run the tests:
+## Tech stack
 
-`make test`
+* Go
+* Gin
+
