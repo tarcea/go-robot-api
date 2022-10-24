@@ -39,25 +39,22 @@ Example:
 
 Url: `https://go-robot-api.up.railway.app`
 
-
 ### GET request
 
 Endpoint: `/game`
 
- Example Request:
-
+Example Request:
 
 ```bash
  curl --location --request GET 'https://go-robot-api.up.railway.app/game?width=5&deep=5&orientation=N&x=1&y=2&command=RFRFFRFRF'
- 
+
 ```
 
 ### POST request
 
 Endpoint: `/game`
 
- Example Request:
-
+Example Request:
 
 ```bash
  curl --location --request POST 'https://go-robot-api.up.railway.app/game' \
@@ -73,6 +70,6 @@ Endpoint: `/game`
 
 ## Tech stack
 
-* Go
-* Gin
-
+- Go
+- Gin
+- Testify
