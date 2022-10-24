@@ -7,6 +7,7 @@ import (
 
 	"github.com/gin-gonic/gin"
 	"github.com/tarcea/go-robot-api/game"
+	"github.com/tarcea/go-robot-api/middlewares"
 )
 
 type Req struct {
@@ -26,7 +27,6 @@ type Res struct {
 
 func PostHandler(c *gin.Context) {
 	c.Header("Content-Type", "application/json")
-	c.Header("Access-Control-Allow-Origin", "*")
 
 	var reqBody Req
 
@@ -122,7 +122,7 @@ func GetHandler(c *gin.Context) {
 
 func main() {
 	r := gin.Default()
-
+	r.Use(middlewares.CORSMiddleware())
 	r.POST("/game", PostHandler)
 	r.GET("/game", GetHandler)
 
