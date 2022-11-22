@@ -37,7 +37,8 @@ Example:
 
 ## [API documentation](https://documenter.getpostman.com/view/12197314/2s84DvrzGN)
 
-Url: `https://go-robot-api.up.railway.app`
+[comment]:<> (Url: `https://go-robot-api.up.railway.app`)
+Url: `https://go-robot.onrender.com`
 
 ### GET request
 
@@ -46,7 +47,7 @@ Endpoint: `/game`
 Example Request:
 
 ```bash
- curl --location --request GET 'https://go-robot-api.up.railway.app/game?width=5&deep=5&orientation=N&x=1&y=2&command=RFRFFRFRF'
+ curl --location --request GET 'https://go-robot.onrender.com/game?width=5&deep=5&orientation=N&x=1&y=2&command=RFRFFRFRF'
 
 ```
 
@@ -57,7 +58,7 @@ Endpoint: `/game`
 Example Request:
 
 ```bash
- curl --location --request POST 'https://go-robot-api.up.railway.app/game' \
+ curl --location --request POST 'https://go-robot.onrender.com/game' \
 --data-raw '{
         "width": "5",
         "deep": "5",
